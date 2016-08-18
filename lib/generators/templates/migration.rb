@@ -35,6 +35,8 @@ class <%= migration_class_name %> < ActiveRecord::Migration
     when :production
       # return false if relation_to_operate_on.count > 20_000
       return true
+    when :loadperf
+      return true
     else
       raise "Encountered unknown rails env of #{Rails.env} in data migration."
     end
