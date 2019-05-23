@@ -139,7 +139,7 @@ module DataMigrations
     end
 
     def webhook_start_text
-      rv = "*Started* migration #{self.class.migration_information[:migration_name]} in #{Rails.env}."
+      "*Started* migration #{self.class.migration_information[:migration_name]} in #{Rails.env}."
     end
 
     def webhook_success_hash(channel)
