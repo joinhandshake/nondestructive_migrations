@@ -10,9 +10,8 @@ gem "byebug", platform: :mri_21
 gem "sqlite3"
 gem "mysql2"
 gem "mocha"
-gem "rails", "4.2.0"
+gem "rails", "5.1.5"
 gem "minitest-rg"
-gem "minitest"
 
 group :test do
   gem "simplecov", require: false

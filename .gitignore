@@ -1,5 +1,4 @@
-.DS_Store
-nondestructive_migrations-*.gem
+nonschema_migrations-*.gem
 coverage/
 gemfiles/*.gemfile.lock
 .idea/

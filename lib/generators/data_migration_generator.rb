@@ -5,7 +5,7 @@ class DataMigrationGenerator < ActiveRecord::Generators::Base
   desc <<-DESC
 Description:
     Creates new nondestructive migration
-DESC
+  DESC
 
   def create_data_migration_file
     migration_template "migration.rb", "db/data_migrate/#{file_name}.rb"
