@@ -1,4 +1,4 @@
-class <%= migration_class_name %> < ActiveRecord::Migration
+class <%= migration_class_name %> < ActiveRecord::Migration[5.1]
   include DataMigrations::BaseMigration
 
   # This ensures that the data migration does not run within a transaction
@@ -33,6 +33,8 @@ class <%= migration_class_name %> < ActiveRecord::Migration
       true
     when :production
       # return false if relation_to_operate_on.count > 20_000
+      true
+    when :loadperf
       true
     else
       raise "Encountered unknown rails env of #{Rails.env} in data migration."
