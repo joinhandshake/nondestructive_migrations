@@ -1,5 +1,6 @@
 ENV["RAILS_ENV"] ||= "test"
 ENV['BUNDLE_GEMFILE'] ||= File.expand_path('../../../Gemfile', __FILE__)
+
 require 'bundler/setup'
 require 'rails/all'
 require 'nondestructive_migrations'
@@ -8,15 +9,12 @@ Bundler.require(:default, Rails.env)
 
 module Dummy
   class Application < ::Rails::Application
-
     # Basic Engine
     config.root = File.join __FILE__, '..'
     config.cache_store = :memory_store
-    config.assets.enabled = false if Rails.version > '3.1'
-    config.secret_token = '012345678901234567890123456789'
+    config.assets.enabled = false
 
     # Mimic Test Environment Config.
-    config.whiny_nils = true if Rails.version < '4.0'
     config.consider_all_requests_local = true
     config.action_controller.perform_caching = false
     config.action_dispatch.show_exceptions = false

@@ -15,10 +15,10 @@ Gem::Specification.new do |s|
                    "lib/tasks/data.rb",
                    "lib/active_record/data_migration.rb",
                    "lib/nondestrucitve_migration.rb"]
-  s.homepage    = 'https://github.com/strydercorp/nondestructive_migrations'
+  s.homepage    = 'https://github.com/joinhandshake/nondestructive_migrations'
   s.license     = 'MIT'
 
   s.add_development_dependency 'minitest'
-  s.add_runtime_dependency 'activerecord', '>= 4.0'
+  s.add_runtime_dependency 'activerecord', '>= 5.2'
   s.add_runtime_dependency 'valid_email'
 end

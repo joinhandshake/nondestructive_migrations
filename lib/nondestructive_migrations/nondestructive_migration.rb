@@ -48,6 +48,7 @@ module DataMigrations
 
     def up
       if Rails.env.development?
+        puts webhook_start_hash(nil)
         puts webhook_start_hash(nil)[:text]
       else
         send_slack_webhook(webhook_start_hash(nil))
