@@ -1,0 +1,10 @@
+version: "3.6"
+
+services:
+  gem:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: tail -F README.md
+    volumes:
+      - ./:/app
