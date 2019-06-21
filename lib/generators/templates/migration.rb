@@ -1,4 +1,4 @@
-class <%= migration_class_name %> < ActiveRecord::Migration[5.1]
+class <%= migration_class_name %> < ActiveRecord::Migration[<%= Rails.version[0..2] %>]
   include DataMigrations::BaseMigration
 
   # This ensures that the data migration does not run within a transaction
